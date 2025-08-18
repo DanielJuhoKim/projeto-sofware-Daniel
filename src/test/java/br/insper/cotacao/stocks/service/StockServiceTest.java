@@ -18,10 +18,10 @@ import java.util.List;
 @ExtendWith(MockitoExtension.class)
 public class StockServiceTest {
 
-    @InjectMocks
+    @InjectMocks // Objeto a ser testado
     private StockService stockService;
 
-    @Mock
+    @Mock // Uma cópia falsa de algo que o objeto a ser testado precisa para funcionar
     private StockRepository stockRepository;
 
     @Test
@@ -70,6 +70,5 @@ public class StockServiceTest {
                 , () -> stockService.delete(1));
 
     }
-
 
 }
