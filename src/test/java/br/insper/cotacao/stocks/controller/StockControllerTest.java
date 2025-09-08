@@ -56,6 +56,4 @@ public class StockControllerTest {
                 .andExpect(MockMvcResultMatchers.status().isOk())// Usando o andExpect, verificamos se a rota está devolvendo o que queremos, nesse caso com o isOk = status 200 e também é possível mudar para casos onde queremos status 400 = isBadRequest
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].ticker").value("PETR")); // Confere se o primeiro elemento do json tem valor "PETR" na chave "ticker" --> "ticker": "PETR"
     }
-
-
 }
